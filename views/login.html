@@ -1,0 +1,25 @@
+﻿<section class="loginSection">
+    <div class="dispTCM">
+        <div class="loginBox">
+            <h2>Sign in</h2>
+            <form name="form" ng-submit="form.$valid && vm.login()" novalidate>
+                <div ng-if="vm.error" class="alert alert-danger">{{vm.error}}</div>
+                <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.username.$invalid }">
+                    <input type="text" name="username" class="form-control" ng-model="vm.username" placeholder="Username" required />
+                    <div ng-messages="form.$submitted && form.username.$error" class="help-block">
+                        <div ng-message="required">Username is required</div>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.password.$invalid }">
+                    <input type="password" name="password" class="form-control" ng-model="vm.password" placeholder="Password" required />
+                    <div ng-messages="form.$submitted && form.password.$error" class="help-block">
+                        <div ng-message="required">Password is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button ng-disabled="vm.loading" class="btn btn-primary">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

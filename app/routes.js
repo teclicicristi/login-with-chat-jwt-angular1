@@ -1,0 +1,16 @@
+myApp
+	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+		$urlRouterProvider.otherwise("/");
+        $stateProvider
+            .state('chat', {
+                url: '/chat',
+                templateUrl: 'views/chat.html',
+                controller: 'chatCtrl'
+            })
+            .state('login', {
+                url: '/login',
+                templateUrl: 'views/login.html',
+                controller: 'loginCtrl',
+                controllerAs: 'vm'
+            });
+	}]);
