@@ -1,6 +1,6 @@
 myApp
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise("/");
+		$urlRouterProvider.otherwise("/login");
         $stateProvider
             .state('chat', {
                 url: '/chat',
