@@ -1,8 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular
-        .module('app')
+    myApp
         .controller('loginCtrl', loginCtrl);
 
     function loginCtrl($location, AuthService) {

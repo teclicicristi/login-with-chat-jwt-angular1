@@ -1,8 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular
-        .module('app')
+    myApp
         .run(fakeAuth);
 
     function fakeAuth($httpBackend) {
