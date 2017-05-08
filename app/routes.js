@@ -3,7 +3,7 @@ myApp
 		$urlRouterProvider.otherwise("/login");
         $stateProvider
             .state('chat', {
-                url: '/chat',
+                url: '/',
                 templateUrl: 'views/chat.html',
                 controller: 'chatCtrl'
             })

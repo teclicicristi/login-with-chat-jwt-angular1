@@ -19,7 +19,7 @@
             vm.loading = true;
             AuthService.Login(vm.username, vm.password, function (result) {
                 if (result === true) {
-                    $location.path('/chat');
+                    $location.path('/');
                 } else {
                     vm.error = 'Username or password is incorrect';
                     vm.loading = false;

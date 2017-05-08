@@ -21,12 +21,13 @@
             initController();
             function initController() {};
 
-            $scope.name = $localStorage.currentUser.lastName;
+            $scope.name = $localStorage.currentUser.firstName + " " + $localStorage.currentUser.lastName;
             $scope.messages = [];
             $scope.im = {};
             $scope.sendIM = function(msg) {
                 var audioSend = new Audio('assets/sounds/send-msg.mp3');
                 audioSend.play();
+                $scope.currentDate = new Date();
                 $scope.messages.push(msg);
                 $scope.im = {};
             }

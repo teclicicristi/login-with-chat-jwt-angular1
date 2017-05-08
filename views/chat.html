@@ -13,8 +13,16 @@
 			    	</div>
 		    	</div>
 		    	<div class="chatBody" scroll-bottom="messages">
-	    			<p class="messageBox">Welcome to chat, {{ name }}!</p>
-	    			<p class="messageBox messageSent" ng-repeat="msg in messages">{{msg.msg}}</p>
+	    			<p class="messageBox">
+	    				<strong>Computer</strong>
+	    				Welcome to chat, {{ name }}!
+	    				<span class="text-right">May 8, 2017</span>
+	    			</p>
+	    			<p class="messageBox messageSent" ng-repeat="msg in messages">
+	    				<strong>{{ name }}</strong>
+	    				{{msg.msg}}
+	    				<span class="text-right">{{ currentDate | date }}</span>
+	    			</p>
 		    	</div>
 		    	<form name="sendForm" ng-submit="sendIM(im)" class="chatActions">
 			    	<div class="row">

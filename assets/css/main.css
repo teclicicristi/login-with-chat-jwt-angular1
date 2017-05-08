@@ -97,3 +97,17 @@
 	border-bottom-left-radius: 5px;
 	border-top-right-radius: 0px;
 }
+.messageBox.messageSent{
+	color: #fff;
+}
+.messageBox>strong,
+.messageBox>span {
+	display: block;
+}
+.messageBox>strong {
+	margin-bottom: 5px;
+}
+.messageBox>span {
+	font-size: 12px;
+	margin-top: 5px;
+}
